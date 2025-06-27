@@ -106,6 +106,60 @@ The project also includes documentation on defending against these attacks. Refe
 
     This feature protects against deauthentication attacks by securing management frames, which are typically vulnerable.
 
+
+## Known Issues with Qualcomm Atheros QCA9377
+
+### **Problem:**
+If you're using a **Qualcomm Atheros QCA9377** Wi-Fi chipset, you might encounter issues when running the Wi-Fi attack simulator, particularly when trying to put your device into monitor mode or run tools like `airodump-ng` or `aireplay-ng`. 
+The problem appears when using firmware-6.
+
+### **Solution:**
+To resolve this issue, uninstall the sixth version and download the version from GitHub.
+
+Be sure to start by creating a backup (in case something goes wrong):
+```	
+cp -R /lib/firmware/ath10k/QCA9377 ~/
+```
+
+Remove the sixth version:
+```
+sudo rm /lib/firmware/ath10k/QCA9377/hw1.0/firmware-6.bin
+```
+
+For the changes to take effect, reboot:
+```
+reboot
+```
+
+Check with script or airodump-ng if it is workig.
+
+If this did not help, or if the fifth version is missing in your distribution, then download the version from the github:
+```	
+sudo git clone https://github.com/ahmedmadder1/airodump-ng-not-showing-any-data-Atheros-QCA9377-.git
+cd airodump-ng-not-showing-any-data-Atheros-QCA9377-
+```
+
+Remove the firmware (it is assumed that you have already made a backup as shown above):
+```
+sudo rm -rf /lib/firmware/ath10k/QCA9377
+```
+
+Copy the downloaded fifth version to the place where it should be on the system:
+```
+sudo cp -R QCA9377 /lib/firmware/ath10k/
+```
+
+For the changes to take effect, reboot:
+```
+reboot
+```
+
+### **Reference Documentation:**
+- [Form](https://miloserdov.org/?p=5553)
+- [Github](https://github.com/ahmedmadder1/airodump-ng-not-showing-any-data-Atheros-QCA9377-/)
+
+
+
 ### Contributing
 
 Feel free to contribute by submitting issues, suggestions, or pull requests. Here's how you can contribute:
