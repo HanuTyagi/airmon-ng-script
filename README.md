@@ -44,3 +44,85 @@ This project simulates common **Wi-Fi attacks** and demonstrates **defense strat
    ```bash
    git clone https://github.com/your-username/Wi-Fi-Attack-Defense-Simulator.git
    cd Wi-Fi-Attack-Defense-Simulator
+```
+
+### 2. **Install Dependencies***:
+
+Run the setup.sh script to install Aircrack-ng and other dependencies:
+
+```
+sudo ./setup.sh
+```
+
+### 3. **Run the Attack Simulation**:
+
+You can run the Wi-Fi attack simulator by executing the aircrack-ng.sh script:
+
+```
+sudo ./aircrack-ng.sh
+```
+
+### 4. **Choose an Attack or Scan**:
+
+The script will provide a menu with options for launching attacks or scanning nearby networks. You can:
+
+    Create an Evil Twin to impersonate a target Wi-Fi.
+
+    Perform a Deauthentication attack to disconnect a victim.
+
+    Scan for nearby Wi-Fi networks for further analysis.
+
+### 5. **Learn Defense Strategies**:
+
+The project also includes documentation on defending against these attacks. Refer to the docs/defense-strategies.md for more information.
+
+### Example Usage
+1. **Evil Twin Attack**:
+
+    Start the script and select the Evil Twin option.
+
+    Select a Wi-Fi network to clone.
+
+    The script will create a fake AP and begin capturing traffic.
+
+2. **Deauthentication Attack**:
+
+    Choose the Deauth option.
+
+    Select a target Wi-Fi network.
+
+    The script will continuously send deauthentication packets, disconnecting the victim.
+
+3. **Scan Networks**:
+
+    Choose the Scan for nearby Wi-Fi networks option to perform a new scan for available networks.
+
+### How to Defend Against Wi-Fi Attacks
+1. **Use WPA3**:
+
+    WPA3 is the latest Wi-Fi security standard, providing stronger encryption and protection against attacks like Evil Twin.
+
+2. **Enable 802.11w Management Frame Protection**:
+
+    This feature protects against deauthentication attacks by securing management frames, which are typically vulnerable.
+
+### Contributing
+
+Feel free to contribute by submitting issues, suggestions, or pull requests. Here's how you can contribute:
+
+    Fork the repository.
+
+    Clone your fork to your local machine.
+
+    Create a new branch for your feature.
+
+    Submit a pull request with your changes.
+
+### License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+Acknowledgments
+
+    Special thanks to the developers of Aircrack-ng and Wireshark for their incredible tools.
+
+    This project is for educational purposes only and should not be used for malicious activities.
