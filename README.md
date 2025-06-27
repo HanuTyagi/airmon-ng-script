@@ -42,8 +42,8 @@ This project simulates common **Wi-Fi attacks** and demonstrates **defense strat
 ### 1. **Clone the Repository**:
    To clone this repository to your machine, run:
    ```bash
-   git clone https://github.com/your-username/Wi-Fi-Attack-Defense-Simulator.git
-   cd Wi-Fi-Attack-Defense-Simulator
+   git clone https://github.com/HanuTyagi/airmon-ng-script.git
+   cd airmon-ng-script
 ```
 
 ### 2. **Install Dependencies***:
