@@ -63,7 +63,6 @@ run_airodump() {
     sleep 120
     # Kill the airodump-ng process
     pkill airodump-ng
-    airmon-ng stop "$interface"
 }
 
 # Function to parse scan results and display Wi-Fi networks
