@@ -1,4 +1,4 @@
-# Wi-Fi Attack & Defense Simulator
+# Wi-Fi Attack & Defense
 
 ## Overview
 
